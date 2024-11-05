@@ -2,7 +2,7 @@ logging:
   level:
     ROOT: INFO
     org.hibernate.SQL: INFO
-    com.example.ecom: INFO
+    fr.codecake.ecom: INFO
 
 spring:
   application:
@@ -50,8 +50,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://ecom.kinde.com
-          jwk-set-uri: https://ecom.kinde.com/.well-known/jwks
+          issuer-uri: https://codecake.kinde.com
+          jwk-set-uri: https://codecake.kinde.com/.well-known/jwks
           audiences: http://localhost:8080/api
   devtools:
     restart:
@@ -71,16 +71,16 @@ application:
   client-base-url: http://localhost:4200
   cors:
     allowed-origins: http://localhost:4200
-    allowed-methods: '*'
-    allowed-headers: '*'
-    exposed-headers: '*'
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "*"
     allow-credentials: false
     max-age: 300
   kinde:
-    api: https://ecom.kinde.com
+    api: https://codecake.kinde.com
     client-id: ${KINDE_CLIENT_ID}
     client-secret: ${KINDE_CLIENT_SECRET}
-    audience: https://ecom.kinde.com/api
+    audience: https://codecake.kinde.com/api
   stripe:
     api-key: ${STRIPE_API_KEY}
     webhook-secret: ${STRIPE_WEBHOOK_SECRET}

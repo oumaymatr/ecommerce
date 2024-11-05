@@ -8,10 +8,10 @@
 		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>fr.ecom</groupId>
+	<groupId>com.example</groupId>
 	<artifactId>ecom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ecom-backend</name>
+	<name>ecommerce-backend</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

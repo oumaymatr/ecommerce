@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS ecommerce_yt;
+GRANT ALL PRIVILEGES ON SCHEMA ecommerce_yt TO oumaima;

@@ -1,14 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecom
+    username: oumaima
+    password: ecom
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: ecommerce_yt
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/master.xml
+    default-schema: ecommerce_yt
+    contexts: local
+    user: oumaima
+    password: ecom
+    
 logging:
   level:
     ROOT: INFO
     org.hibernate.SQL: DEBUG
-    org.springframework.security: INFO
-    fr.ecom.ecom: DEBUG
-    org.apache.hc.client5.http: INFO
-
-spring:
-  devtools:
-    restart:
-      enabled: true
-    livereload:
-      enabled: true
+    liquibase: DEBUG
+    com.example.ecom: DEBUG

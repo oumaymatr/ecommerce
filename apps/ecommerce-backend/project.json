@@ -1,6 +1,23 @@
 {
   "name": "ecommerce-backend",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/src",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ecommerce-backend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvnw.cmd clean install -DskipTests",
+        "cwd": "apps/ecommerce-backend"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "mvnw.cmd spring-boot:run \"-Dspring-boot.run.profiles=local\"",
+        "cwd": "apps/ecommerce-backend"
+      }
+    }
+  },
   "tags": []
 }
